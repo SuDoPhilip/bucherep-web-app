@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Activity, FileText, Trash2, Plus, RefreshCw, Loader2 } from "lucide-react";
+import { Activity, Trash2, Plus, RefreshCw, Loader2 } from "lucide-react";
 import { getActivityLogs, type ActivityLog } from "@/features/activity-logs/api/activity-logs-api";
 
 const actionIcons = {
