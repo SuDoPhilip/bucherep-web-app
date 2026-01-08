@@ -1,0 +1,20 @@
+name: bucherep-app
+region: nyc
+
+services:
+  - name: web
+    github:
+      repo: your-username/your-repo
+      branch: main
+      deploy_on_push: true
+    dockerfile_path: ./app/Dockerfile
+    docker_context: ./app
+    http_port: 8080
+    health_check:
+      http_path: /
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    envs:
+      - key: VITE_API_BASE_URL
+        scope: RUN_TIME
+        value: ${VITE_API_BASE_URL}

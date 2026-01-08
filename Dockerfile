@@ -24,7 +24,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80
+# Expose port 8080 (Digital Ocean App Platform default)
 EXPOSE 8080
 
 # Start nginx
